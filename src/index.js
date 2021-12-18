@@ -137,11 +137,11 @@
 // console.log(arr3);
 
 //配列のコピー、結合
-const arr4 = [10, 20];
-const arr5 = [30, 40];
+// const arr4 = [10, 20];
+// const arr5 = [30, 40];
 
-const arr6 = [...arr4];
-console.log(arr6);
+// const arr6 = [...arr4];
+// console.log(arr6);
 
 // const arr7 = [...arr4, ...arr5];
 // console.log(arr7);
@@ -153,6 +153,38 @@ console.log(arr6);
 // console.log(arr4);
 
 // スプレッド構文でコピーすると元の配列は変わらない
-arr6[0] = 100;
-console.log(arr6);
-console.log(arr4);
+// arr6[0] = 100;
+// console.log(arr6);
+// console.log(arr4);
+
+/**
+ * mapやfiterを使った配列の処理
+ */
+const nameArr = ["田中", "山田", "じゃけえ"];
+// for(let index = 0; index < nameArr.length; index++) {
+//   console.log(nameArr[index]);
+//      console.log(`${index + 1}番目は${nameArr[index]}です`)
+// }
+
+// const nameArr2 = nameArr.map((name) => {
+//   return name;
+// })
+// console.log(nameArr2)
+
+// nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`))
+
+// const numArr = [1, 2, 3, 4, 5, 6, 7];
+// const newNumArr = numArr.filter((num) => {
+//   // returnの後に条件式
+//   return num % 2 === 1;
+// });
+// console.log(newNumArr);
+
+const newNameArr = nameArr.map((name) => {
+  if (name === "じゃけえ") {
+    return name;
+  } else {
+    return `${name}さん`;
+  }
+});
+console.log(newNameArr);
